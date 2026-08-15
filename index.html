@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frisson — wine, pizza, bar · Москва</title>
+<meta name="description" content="Frisson — wine, pizza, bar в Хамовниках, Большой Саввинский 12с1. Bread buttered on both sides.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=PT+Mono&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f6f5f2;
+    --ink:#111111;
+    --ink-soft:#555;
+    --butter:#d9c256;
+    --line:#111;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"PT Mono",ui-monospace,monospace;
+    line-height:1.65;
+  }
+  .hand{font-family:"Caveat",cursive}
+  a{color:var(--ink)}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+
+  /* шапка */
+  header{
+    position:sticky;top:0;z-index:10;
+    background:rgba(246,245,242,.94);backdrop-filter:blur(6px);
+    border-bottom:2px solid var(--line);
+  }
+  nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo-sm img{height:30px;display:block}
+  .menu{display:flex;gap:24px;font-size:13px}
+  .menu a{text-decoration:none;border-bottom:2px solid transparent}
+  .menu a:hover{border-bottom-color:var(--ink)}
+
+  /* герой */
+  .hero{
+    min-height:74vh;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;text-align:center;
+    padding:72px 24px 56px;
+  }
+  .hero img.logo{width:min(540px,86vw);height:auto}
+  .tagline{
+    margin-top:10px;font-size:13px;letter-spacing:.34em;
+    text-transform:uppercase;
+  }
+  .hero .since{margin-top:28px;font-size:13px;color:var(--ink-soft)}
+  .cta{
+    display:inline-block;margin-top:38px;padding:14px 40px;
+    border:2px solid var(--ink);background:transparent;color:var(--ink);
+    text-decoration:none;font-size:14px;letter-spacing:.12em;text-transform:uppercase;
+    transition:all .2s;
+  }
+  .cta:hover{background:var(--ink);color:var(--paper)}
+
+  /* лента */
+  .tape{
+    background:var(--ink);color:var(--paper);
+    overflow:hidden;white-space:nowrap;padding:10px 0;
+  }
+  .tape span{
+    display:inline-block;padding-left:100%;
+    animation:tape 22s linear infinite;
+    font-size:13px;letter-spacing:.3em;text-transform:uppercase;
+  }
+  .tape b{color:var(--butter);font-weight:400}
+  @keyframes tape{to{transform:translateX(-100%)}}
+
+  section{padding:76px 0}
+  section + section{border-top:2px solid var(--line)}
+  h2.hand{font-size:46px;font-weight:400;line-height:1.1;margin-bottom:22px}
+  .lead{max-width:600px;font-size:15px;color:var(--ink-soft)}
+
+  .note-b{font-weight:400;background:var(--butter);padding:1px 6px}
+
+  /* бронь */
+  .book{text-align:center}
+  .book .phone{
+    display:inline-block;margin-top:30px;font-size:clamp(22px,4vw,34px);
+    text-decoration:none;border-bottom:3px solid var(--butter);
+  }
+  .book .alt{margin-top:18px;font-size:13px;color:var(--ink-soft)}
+  .book .alt a{color:var(--ink)}
+
+  /* контакты */
+  .contacts{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:36px}
+  .contacts dt{font-family:"Caveat",cursive;font-size:26px;margin-bottom:4px}
+  .contacts dd{margin-bottom:24px;font-size:15px}
+  .maplinks{margin-top:6px;font-size:13px}
+  .maplinks a{margin-right:16px}
+
+  footer{
+    background:var(--ink);color:var(--paper);
+    padding:48px 0 40px;text-align:center;
+  }
+  footer img{height:44px;margin-bottom:18px}
+  footer .tagline{color:var(--butter);font-size:11px}
+  footer .legal{margin-top:22px;font-size:11px;color:#999}
+
+  .draft{position:fixed;bottom:14px;right:14px;background:#fff;color:#111;
+    font-size:11px;padding:6px 12px;letter-spacing:.15em;border:2px solid #111;z-index:20}
+
+  @media(max-width:720px){
+    .contacts{grid-template-columns:1fr}
+    nav{height:auto;flex-direction:column;gap:8px;padding:10px 0}
+    .menu{gap:16px;font-size:12px}
+    section{padding:56px 0}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="logo-sm" href="#top"><img src="assets/logo-black.png" alt="Frisson"></a>
+      <div class="menu">
+        <a href="#about">о нас</a>
+        <a href="#book">бронь</a>
+        <a href="#contacts">контакты</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <img class="logo" src="assets/logo-black.png" alt="Frisson">
+  <div class="tagline">Bread buttered on both sides.</div>
+  <div class="since">wine · pizza · bar · Хамовники · since july 2026</div>
+  <a class="cta" href="#book">забронировать стол</a>
+</div>
+
+<div class="tape"><span>frisson · <b>bread buttered on both sides.</b> · wine · pizza · bar · frisson · <b>bread buttered on both sides.</b> · wine · pizza · bar ·&nbsp;</span></div>
+
+<section id="about">
+  <div class="wrap">
+    <h2 class="hand">Мурашки от простых вещей</h2>
+    <p class="lead">Frisson (фр.) — «дрожь восторга». Wine, pizza, bar
+    в Хамовниках: пицца из печи, паста, антипасти к вину и джелато
+    на десерт. Хлеб здесь намазан маслом с обеих сторон.</p>
+    <p class="lead" style="margin-top:16px"><b class="note-b">полное меню — к открытию.</b></p>
+  </div>
+</section>
+
+<section id="book" class="book">
+  <div class="wrap">
+    <h2 class="hand">Забронировать стол</h2>
+    <p class="lead" style="margin:0 auto">Пока мы достраиваемся — бронь по телефону
+    или в директе. Подтвердим в течение дня.</p>
+    <a class="phone" href="tel:+79990997313">+7 999 099-73-13</a>
+    <p class="alt">или напишите в <a href="https://instagram.com/frisson_bistro" rel="nofollow">директ @frisson_bistro</a></p>
+  </div>
+</section>
+
+<section id="contacts">
+  <div class="wrap">
+    <h2 class="hand">Как нас найти</h2>
+    <dl class="contacts">
+      <div>
+        <dt>адрес</dt>
+        <dd>119435, Москва,<br>Большой Саввинский пер., 12 стр. 1
+          <div class="maplinks">
+            <a href="https://yandex.ru/maps/org/frisson/84474775574/" rel="nofollow">я.карты</a>
+            <a href="https://2gis.ru" rel="nofollow">2гис · скоро</a>
+          </div>
+        </dd>
+        <dt>часы</dt>
+        <dd>вс–чт 11:00–23:00<br>пт–сб 11:00–00:00</dd>
+      </div>
+      <div>
+        <dt>телефон</dt>
+        <dd><a href="tel:+79990997313">+7 999 099-73-13</a> · бронирование</dd>
+        <dt>соцсети</dt>
+        <dd>инстаграм <a href="https://instagram.com/frisson_bistro" rel="nofollow">@frisson_bistro</a><br>VK · скоро</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<footer>
+  <img src="assets/logo-white.png" alt="Frisson">
+  <div class="tagline">Bread buttered on both sides.</div>
+  <div class="legal">ООО «ИЮЛЬ» · Москва · since july 2026</div>
+</footer>
+
+<div class="draft">DRAFT · прототип для обсуждения</div>
+
+</body>
+</html>
