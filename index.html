@@ -95,6 +95,9 @@
   .contacts dd{margin-bottom:24px;font-size:15px}
   .maplinks{margin-top:6px;font-size:13px}
   .maplinks a{margin-right:16px}
+  .socials{display:flex;align-items:center;gap:14px}
+  .soc{display:inline-block;width:38px;height:38px;color:var(--ink)}
+  .soc svg{width:100%;height:100%;display:block}
 
   footer{
     background:var(--ink);color:var(--paper);
@@ -133,7 +136,7 @@
 <div class="hero" id="top">
   <img class="logo" src="assets/logo-black.png" alt="Frisson">
   <div class="tagline">Bread buttered on both sides.</div>
-  <div class="since">wine · pizza · bar · Хамовники · since july 2026</div>
+  <div class="since">wine · pizza · bar · Хамовники</div>
   <a class="cta" href="#book">забронировать стол</a>
 </div>
 
@@ -152,10 +155,9 @@
 <section id="book" class="book">
   <div class="wrap">
     <h2 class="hand">Забронировать стол</h2>
-    <p class="lead" style="margin:0 auto">Пока мы достраиваемся — бронь по телефону
-    или в директе. Подтвердим в течение дня.</p>
+    <p class="lead" style="margin:0 auto">Пока мы достраиваемся — бронь по телефону.
+    Подтвердим в течение дня.</p>
     <a class="phone" href="tel:+79990997313">+7 999 099-73-13</a>
-    <p class="alt">или напишите в <a href="https://instagram.com/frisson_bistro" rel="nofollow">директ @frisson_bistro</a></p>
   </div>
 </section>
 
@@ -168,7 +170,6 @@
         <dd>119435, Москва,<br>Большой Саввинский пер., 12 стр. 1
           <div class="maplinks">
             <a href="https://yandex.ru/maps/org/frisson/84474775574/" rel="nofollow">я.карты</a>
-            <a href="https://2gis.ru" rel="nofollow">2гис · скоро</a>
           </div>
         </dd>
         <dt>часы</dt>
@@ -178,7 +179,17 @@
         <dt>телефон</dt>
         <dd><a href="tel:+79990997313">+7 999 099-73-13</a> · бронирование</dd>
         <dt>соцсети</dt>
-        <dd>инстаграм <a href="https://instagram.com/frisson_bistro" rel="nofollow">@frisson_bistro</a><br>VK · скоро</dd>
+        <dd class="socials">
+          <span class="soc" title="ВКонтакте">
+            <svg viewBox="0 0 48 48" aria-label="VK"><rect x="1.5" y="1.5" width="45" height="45" rx="10" fill="none" stroke="currentColor" stroke-width="3"/><path fill="currentColor" d="M25.6 33c-7.6 0-12-5.2-12.2-13.9h3.9c.1 6.4 3 9.1 5.2 9.6V19.1h3.6v5.5c2.2-.2 4.5-2.7 5.3-5.5h3.6c-.6 3.4-3.1 5.9-4.8 6.9 1.7.8 4.5 3 5.6 7h-4c-.8-2.5-2.9-4.5-5.7-4.8V33h-.5z"/></svg>
+          </span>
+          <span class="soc" title="RUTUBE">
+            <svg viewBox="0 0 48 48" aria-label="RUTUBE"><rect x="1.5" y="1.5" width="45" height="45" rx="10" fill="none" stroke="currentColor" stroke-width="3"/><path fill="currentColor" d="M14 14h13.5c4.1 0 6.5 2.3 6.5 6 0 2.9-1.5 4.9-4 5.6L34.5 34h-4.9l-4.2-7.8h-6.9V34H14V14zm4.5 3.9v4.6h8.6c1.6 0 2.4-.9 2.4-2.3s-.8-2.3-2.4-2.3h-8.6z"/></svg>
+          </span>
+          <span class="soc" title="Телеграм">
+            <svg viewBox="0 0 48 48" aria-label="Telegram"><rect x="1.5" y="1.5" width="45" height="45" rx="10" fill="none" stroke="currentColor" stroke-width="3"/><path fill="currentColor" d="M36 13.6 31.9 34c-.3 1.4-1.1 1.7-2.3 1.1l-6.3-4.7-3.1 3c-.3.3-.6.6-1.3.6l.5-6.5L31.2 16c.5-.5-.1-.7-.8-.3L15.9 24.9l-6.2-2c-1.3-.4-1.4-1.3.3-1.9l24.2-9.4c1.1-.4 2.1.3 1.8 2z"/></svg>
+          </span>
+        </dd>
       </div>
     </dl>
   </div>
@@ -187,7 +198,7 @@
 <footer>
   <img src="assets/logo-white.png" alt="Frisson">
   <div class="tagline">Bread buttered on both sides.</div>
-  <div class="legal">ООО «ИЮЛЬ» · Москва · since july 2026</div>
+  <div class="legal">ООО «ИЮЛЬ» · Москва</div>
 </footer>
 
 <div class="draft">DRAFT · прототип для обсуждения</div>
